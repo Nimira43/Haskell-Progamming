@@ -1,3 +1,11 @@
+-- This is how to do comments in Haskell
+
+{- 
+  This is
+  a multi-line
+  comment
+-}
+
 greet :: String -> String
 greet name = "Welcome, " ++ name ++ ", to Haskell."
 
