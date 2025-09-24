@@ -66,3 +66,12 @@ main = do
   putStrLn ("Gravity: " ++ show gravity)
   putStrLn ("Is Wizard?: " ++ show isWizard)
 
+  -- Booleans
+
+
+  putStrLn ("not True = " ++ show (not True))
+  putStrLn ("True || False = " ++ show (True || False))
+  putStrLn ("True && False = " ++ show (True && False))
+  putStrLn ("(False || True) && True = " ++ show ((False || True) && True))
+  putStrLn ("not (not True) = " ++ show (not (not True)))
+
