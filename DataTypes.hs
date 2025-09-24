@@ -32,6 +32,13 @@ Bounded Integers
 2) maxBound and minBound come from the Bounded typeclass.
 3) Printing the limits of numeric types — the highest and lowest values Int can hold.
 
+Floating-Point Arithmetic
+1) This uses Double, a 64-bit floating-point type.
+2) The result is not exactly 4.000000000004 due to binary approximation.
+3) Printed it with show, and then with printf to reveal 18 digits of precision.
+4) The output: 4.000000000003999500 shows the subtle rounding error.
+
+Exact Rational Arithmetic
 
 
 -}
