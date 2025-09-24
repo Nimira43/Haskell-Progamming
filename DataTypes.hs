@@ -14,3 +14,4 @@ main = do
   putStrLn ("Max Integer using maxBound: " ++ show maxInt)
   putStrLn ("Min Integer using minBound: " ++ show minInt)
   putStrLn ("Floating-point Representation Demo: " ++ show bigFloat)
+  printf "Floating-point with precision: %.18f\n" bigFloat
