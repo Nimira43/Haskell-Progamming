@@ -37,14 +37,19 @@ Floating-Point Arithmetic
 2) The result is not exactly 4.000000000004 due to binary approximation.
 3) Printed it with show, and then with printf to reveal 18 digits of precision.
 4) The output: 4.000000000003999500 shows the subtle rounding error.
+5) Floating-point numbers follow IEEE 754 standard — binary representation of decimals causes precision loss.
 
 Exact Rational Arithmetic
 1) % constructs a Rational, which is an exact fraction.
 2) No rounding, no approximation — just pure ratio.
 3) Printed it as a fraction and then converted it to a Double.
+4) Rational values are stored as numerator and denominator — ideal for financial or symbolic maths.
 
 Deviation Detector
 1) This function compares the floating-point result to the exact rational value.
 2) The output: 8.881784197001252e-16 is the quantified error — tiny, but real.
+3) fromRational converts Rational to Double for comparison.
+4) abs ensures the deviation is always positive — measuring magnitude, not direction.
+5) Useful for detecting floating-point drift in scientific or financial calculations.
 
 -}
