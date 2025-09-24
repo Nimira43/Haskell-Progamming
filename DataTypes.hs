@@ -1,5 +1,6 @@
 import Data.List
 import System.IO
+import Text.Printf
 
 maxInt :: Int
 maxInt = maxBound :: Int
