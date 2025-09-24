@@ -6,6 +6,10 @@
   comment
 -}
 
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Evaluate" #-}
+{-# HLINT ignore "Redundant not" #-}
+
 greet :: String -> String
 greet name = "Welcome, " ++ name ++ ", to Haskell."
 
@@ -46,19 +50,19 @@ main = do
   putStrLn(greet name)
   
   let adding = add 4 8
-  putStrLn ("The result is: " ++ show adding)
+  putStrLn ("Addition: " ++ show adding)
   
   let deleting = sub 14 8
-  putStrLn ("The result is: " ++ show deleting)
+  putStrLn ("Subtraction: " ++ show deleting)
   
   let multiplying = mult 4 5
-  putStrLn ("The result is: " ++ show multiplying)
+  putStrLn ("Multiplication: " ++ show multiplying)
 
   let dividing = divide 15 5
-  putStrLn ("The result is: " ++ show dividing)
+  putStrLn ("Integer Division: " ++ show dividing)
   
   let dividing2 = divide2 22 7
-  putStrLn ("The result is: " ++ show dividing2)
+  putStrLn ("Floating Division: " ++ show dividing2)
 
   putStrLn ("Person: " ++ person)
   putStrLn ("Age: " ++ show age)
@@ -67,7 +71,11 @@ main = do
   putStrLn ("Is Wizard?: " ++ show isWizard)
 
   -- Booleans
-
+  {-
+  not :: Bool -> Bool
+  (||) :: Bool -> Bool -> Bool
+  (&&) :: Bool -> Bool -> Bool
+  -}  
 
   putStrLn ("not True = " ++ show (not True))
   putStrLn ("True || False = " ++ show (True || False))
