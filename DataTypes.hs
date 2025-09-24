@@ -43,4 +43,8 @@ Exact Rational Arithmetic
 2) No rounding, no approximation — just pure ratio.
 3) Printed it as a fraction and then converted it to a Double.
 
+Deviation Detector
+1) This function compares the floating-point result to the exact rational value.
+2) The output: 8.881784197001252e-16 is the quantified error — tiny, but real.
+
 -}
