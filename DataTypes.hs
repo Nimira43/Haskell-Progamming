@@ -39,6 +39,8 @@ Floating-Point Arithmetic
 4) The output: 4.000000000003999500 shows the subtle rounding error.
 
 Exact Rational Arithmetic
-
+1) % constructs a Rational, which is an exact fraction.
+2) No rounding, no approximation — just pure ratio.
+3) Printed it as a fraction and then converted it to a Double.
 
 -}
