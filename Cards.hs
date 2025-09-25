@@ -14,7 +14,7 @@ main = do
 {-
   \(i, card) -> putStrLn $ show i ++ " " ++ card
 
-  1) This is a lambda function — an anonymous spell.
+  1) This is a lambda function — an anonymous function.
   2) It takes a tuple (i, card) and prints it like: 0 Ace of Diamonds
   3) show i converts the index to a string.
   4) ++ is string concatenation.
