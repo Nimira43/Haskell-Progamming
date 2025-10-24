@@ -1,7 +1,12 @@
 {-
-To run a Haskell program
+To run a Haskell program:
 
-ghc ProgramName.hs
+ghc Program006.hs
+./Program006
+
+Or interpret directly:
+
+runghc Program006.hs
 -}
 
 describeCard :: (String, String) -> String
