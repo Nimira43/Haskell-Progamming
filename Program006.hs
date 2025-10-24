@@ -18,3 +18,8 @@ main = do
       card2 = ("Ace", "Spades")
       card3 = ("Nine", "Clubs")
       card4 = ("Eight", "Hearts")
+
+  putStrLn (describeCard card1)
+  putStrLn (describeCard card2)
+  putStrLn (describeCard card3)
+  putStrLn (describeCard card4)
