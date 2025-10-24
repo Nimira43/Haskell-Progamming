@@ -10,7 +10,7 @@ runghc Program006.hs
 -}
 
 describeCard :: (String, String) -> String
-describeCard :: (rank, suit) = "The card is the " ++ rank ++ " of " ++ suit
+describeCard (rank, suit) = "The card is the " ++ rank ++ " of " ++ suit
 
 main :: IO ()
 main = do
