@@ -9,7 +9,9 @@ Or interpret directly:
 runghc Program006.hs
 -}
 
-describeCard :: (String, String) -> String
+type Card = (String, String)
+
+describeCard :: Card -> String
 describeCard (rank, suit) = "The card is the " ++ rank ++ " of " ++ suit
 
 main :: IO ()
