@@ -32,3 +32,15 @@ main = do
 
   putStrLn "\nCardValues: "
   mapM_ (\(Card rank suit) -> putStrLn $ show rank ++ " of " ++ show suit ++ " = " ++ show (cardValue rank)) [card1, card2, card3, card4]
+  
+{- 
+  Why Derive?
+
+deriving Show lets you print values.
+deriving Eq enables == and /=.
+deriving Enum gives you fromEnum, toEnum, ranges like [Two .. Ace].
+
+You can even derive Ord to compare ranks (rank1 > rank2), which is handy for games.
+  
+  
+  -}
