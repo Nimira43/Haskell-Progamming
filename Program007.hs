@@ -8,3 +8,11 @@ describeCard :: Card -> String
 describeCard (Card Ace Spades) = "The Ace of Spades"
 describeCard (Card King Hearts) = "The King of Hearts"
 describeCard (Card rank suit) = "This card is the " ++ show rank ++ " of " ++ show suit
+
+cardValue :: Rank -> Int
+cardValue rank
+ | rank == Ace    = 11
+ | rank == King   = 10
+ | rank == Queen  = 10
+ | rank == Jack   = 10
+ | otherwise      = fromEnum rank + 2
