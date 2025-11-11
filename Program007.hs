@@ -28,3 +28,6 @@ main = do
   putStrLn (describeCard card2)
   putStrLn (describeCard card3)
   putStrLn (describeCard card4)
+
+  putStrLn "\nCardValues: "
+  mapM_ (\(Card rank suit) -> putStrLn $ show rank ++ " of " ++ show suit ++ " = " ++ show (cardValue rank)) [card1, card2, card3, card4]
