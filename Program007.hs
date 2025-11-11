@@ -35,12 +35,48 @@ main = do
   
 {- 
   Why Derive?
-
 deriving Show lets you print values.
 deriving Eq enables == and /=.
 deriving Enum gives you fromEnum, toEnum, ranges like [Two .. Ace].
-
 You can even derive Ord to compare ranks (rank1 > rank2), which is handy for games.
   
-  
-  -}
+  Pattern Matching
+Pattern matching lets you deconstruct values directly in function definitions. It’s like saying: “If the value looks like this, do that.”
+
+  Key Uses:
+Matching specific constructors:
+
+describeCard (Card Ace Spades) = "The Ace of Spades"
+
+  Catch-all patterns (wildcards):
+
+describeCard (Card rank suit) = "This card is the " ++ show rank ++ " of " ++ show suit
+
+  Tips:
+Order matters: Haskell tries patterns top to bottom.
+You can match on tuples, lists, custom types, and more.
+Use _ to ignore values you don’t care about.
+
+  Guards
+Guards are like if-else ladders, but more elegant and readable.
+
+  Syntax:
+cardValue rank
+  | rank == Ace   = 11
+  | rank == King  = 10
+  | otherwise     = fromEnum rank + 2
+
+  Tips:
+otherwise is just True — a default catch-all.
+Guards are great for numeric ranges, conditions, or multi-branch logic.
+You can use where or let to define helper values.
+
+  Typeclass Derivations
+To use ==, fromEnum, or show, your types must derive the right typeclasses:
+
+Typeclass	        Enables...
+Show	            Printing with show
+Eq	              Equality checks (==, /=)
+Enum	            fromEnum, toEnum, ranges like [Two .. Ace]
+Ord	              Comparisons (<, >, compare)
+-}
