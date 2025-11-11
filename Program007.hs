@@ -16,3 +16,10 @@ cardValue rank
  | rank == Queen  = 10
  | rank == Jack   = 10
  | otherwise      = fromEnum rank + 2
+
+main :: IO ()
+main = do
+  let card1 = Card Ace Spades
+      card2 = Card King Hearts 
+      card3 = Card Seven Diamonds
+      card4 = Card Two Clubs
