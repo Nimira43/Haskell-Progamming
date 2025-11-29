@@ -63,7 +63,7 @@ data Cat
   deriving (Show)
 
 icon :: Cat -> String
-icon Lenny = "Supercat — guardian spirit!"
+icon Lenny = "Supercat the guardian spirit!"
 icon (OtherCat name) = "Another cat: " ++ name
 icon (Hero name power) = name ++ " with power level " ++ show power
 
