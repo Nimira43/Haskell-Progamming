@@ -14,3 +14,9 @@ data Rank
 
 data Card = Card Rank Suit
   deriving (Show, Eq)
+
+describeCard :: Card -> String
+
+describeCard (Card Nine Clubs) = "The Nine of Clubs"
+describeCard (Card Three Hearts) = "The Three of Hearts"
+describeCard (Card rank suit) = "This card is the " ++ show rank ++ " of " ++ show suit
