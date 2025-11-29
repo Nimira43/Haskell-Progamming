@@ -88,17 +88,11 @@ main = do
   putStrLn (icon (Hero "Shadowpaw" 9001))
 
 {-
-  
 What This Program Demonstrates
 
 Pattern Matching: Special cases for Nine of Clubs and Three of Hearts.
-
 Guards: Clean branching in cardValue.
-
 ADTs with Payloads: Shape carries floats, Cat carries names and powers.
-
 Recursive ADT: Hand models a list of cards, showing recursion in action.
-
 Composition: Cards, shapes, and cats all coexist in one program.
-
 -}
