@@ -40,6 +40,11 @@ handValue :: Hand -> Int
 handValue Empty = 0
 handValue (Add (Card rank _) rest) = cardValue rank + handValue rest
 
+-- Show all cards in a hand
+showHand :: Hand -> [String]
+showHand Empty = []
+showHand (Add card rest) = describeCard card : showHand rest
+
 -- Defining Shape 
 data Shape
   = Circle Float
