@@ -31,6 +31,11 @@ cardValue rank
   | rank == Jack = 10
   | otherwise = fromEnum rank + 2
 
+-- Recursive ADT: Hand of Cards
+data Hand = Empty | Add Card Hand
+  deriving (Show)
+
+
 -- Defining Shape 
 data Shape
   = Circle Float
