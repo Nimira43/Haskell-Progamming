@@ -77,3 +77,7 @@ main = do
       hand = Add card1 (Add card2 (Add card3 (Add card4 Empty)))
   mapM_ putStrLn (showHand hand)
   putStrLn ("Total hand value: " ++ show (handValue hand))
+
+  putStrLn "\n=== Shape Example ==="
+  putStrLn ("Circle area: " ++ show (area (Circle 3)))
+  putStrLn ("Rectangle area: " ++ show (area (Rectangle 3 5)))
