@@ -14,7 +14,10 @@ data Rank  = Two | Three | Four | Five | Six | Seven | Eight | Nine | Ten | Jack
 
 data Card = Card Rank Suit
   deriving (Show)
-  
+
+data Shape = Circle Float
+           | Rectangle Float Float
+
 myCard :: Card
 myCard = Card Seven Diamonds
 
