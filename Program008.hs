@@ -35,7 +35,10 @@ data Cat
   | Hero String Int
   deriving (Show)
 
-
+icon :: Cat -> String
+icon Lenny = "Supercat"
+icon (OtherCat name) = "Another cat: " ++ name
+icon (Hero name power) = name ++ "with power level " ++ show power
 
 main :: IO ()
 main = do
