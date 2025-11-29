@@ -66,3 +66,14 @@ icon :: Cat -> String
 icon Lenny = "Supercat — guardian spirit!"
 icon (OtherCat name) = "Another cat: " ++ name
 icon (Hero name power) = name ++ " with power level " ++ show power
+
+main :: IO ()
+main = do
+  putStrLn "=== Card Example ==="
+  let card1 = Card Ace Spades
+      card2 = Card King Hearts
+      card3 = Card Seven Diamonds
+      card4 = Card Two Clubs
+      hand = Add card1 (Add card2 (Add card3 (Add card4 Empty)))
+  mapM_ putStrLn (showHand hand)
+  putStrLn ("Total hand value: " ++ show (handValue hand))
