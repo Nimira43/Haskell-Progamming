@@ -24,6 +24,7 @@ showCard (Card rank suit) = show rank ++ " of " ++ show suit
 data Shape
   = Circle Float
   | Rectangle Float Float
+  deriving (Show)
 
 area :: Shape -> Float
 area (Circle r) = pi * r ^ 2
@@ -38,8 +39,18 @@ data Cat
 icon :: Cat -> String
 icon Lenny = "Supercat"
 icon (OtherCat name) = "Another cat: " ++ name
-icon (Hero name power) = name ++ "with power level " ++ show power
+icon (Hero name power) = name ++ " with power level " ++ show power
 
 main :: IO ()
 main = do
+  putStrLn "Card Example:"
   putStrLn (showCard myCard)
+
+  putStrLn "Shape Example:"
+  putStrLn ("Circle area: " ++ show (area (Circle 3)))
+  putStrLn ("Rectangle area: " ++ show (area (Rectangle 3 5)))
+  
+  putStrLn "Cat Example"
+  putStrLn (icon Lenny)
+  putStrLn (icon (OtherCat "Whiskers"))
+  putStrLn (icon (Hero "Shadowpaw" 9001))
