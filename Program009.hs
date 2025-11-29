@@ -81,3 +81,8 @@ main = do
   putStrLn "\n=== Shape Example ==="
   putStrLn ("Circle area: " ++ show (area (Circle 3)))
   putStrLn ("Rectangle area: " ++ show (area (Rectangle 3 5)))
+
+  putStrLn "\n=== Cat Example ==="
+  putStrLn (icon Lenny)
+  putStrLn (icon (OtherCat "Whiskers"))
+  putStrLn (icon (Hero "Shadowpaw" 9001))
