@@ -35,6 +35,10 @@ cardValue rank
 data Hand = Empty | Add Card Hand
   deriving (Show)
 
+-- Calculate total value of a hand
+handValue :: Hand -> Int
+handValue Empty = 0
+handValue (Add (Card rank _) rest) = cardValue rank + handValue rest
 
 -- Defining Shape 
 data Shape
