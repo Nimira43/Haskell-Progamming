@@ -30,3 +30,25 @@ cardValue rank
   | rank == Queen = 10
   | rank == Jack = 10
   | otherwise = fromEnum rank + 2
+
+-- Defining Shape 
+data Shape
+  = Circle Float
+  | Rectangle Float Float
+  deriving (Show)
+
+area :: Shape -> Float
+area (Circle r) = pi * r ^ 2
+area (Rectangle w h) = w * h
+
+-- Defining Cat 
+data Cat
+  = Lenny
+  | OtherCat String
+  | Hero String Int
+  deriving (Show)
+
+icon :: Cat -> String
+icon Lenny = "Supercat — guardian spirit!"
+icon (OtherCat name) = "Another cat: " ++ name
+icon (Hero name power) = name ++ " with power level " ++ show power
