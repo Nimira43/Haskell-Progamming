@@ -11,6 +11,7 @@ main = do
 
   mapM_ (\(i, card) -> putStrLn $ show i ++ " " ++ card) (zip [0..] cards')
 
+
 {-
   \(i, card) -> putStrLn $ show i ++ " " ++ card
 
